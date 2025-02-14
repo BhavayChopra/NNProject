@@ -1,64 +1,67 @@
-PyroScope AI - Fire & Smoke Detection on Edge Devices
+# PyroScope AI - Fire & Smoke Detection on Edge Devices
 
-Overview
+## Overview
 
-PyroScope AI is an advanced fire and smoke detection system built using YOLOv8. Designed for real-time inference on edge devices, it ensures rapid response in fire-prone environments like forests, warehouses, and industrial sites. The model is optimized using ONNX for efficient deployment on low-power hardware.
+PyroScope AI is an advanced fire and smoke detection system built using **YOLOv8**. Designed for real-time inference on edge devices, it ensures rapid response in fire-prone environments like forests, warehouses, and industrial sites. The model is optimized using **ONNX** for efficient deployment on low-power hardware.
 
-Features
+---
 
-Real-time detection: Identifies fire and smoke using a webcam.
+## Features
 
-Optimized for edge devices: Runs efficiently on NVIDIA Jetson, Raspberry Pi, and similar hardware.
+- **Real-time detection**: Identifies fire and smoke using a webcam.
+- **Optimized for edge devices**: Runs efficiently on NVIDIA Jetson, Raspberry Pi, and similar hardware.
+- **ONNX acceleration**: Faster inference with CUDA and CPU support.
+- **User-friendly interface**: Displays live detection results with bounding boxes and labels.
 
-ONNX acceleration: Faster inference with CUDA and CPU support.
+---
 
-User-friendly interface: Displays live detection results with bounding boxes and labels.
+## Installation
 
-Installation
+### Requirements
 
-Requirements
+- Python 3.8+
+- OpenCV
+- PyTorch
+- ONNX & ONNX Runtime
+- Ultralytics YOLO
 
-Python 3.8+
+### Setup
 
-OpenCV
+1. Clone the repository:
 
-PyTorch
+   ```bash
+   git clone https://github.com/yourusername/pyroscope-ai.git
+   cd pyroscope-ai
+   Install dependencies:
 
-ONNX & ONNX Runtime
-
-Ultralytics YOLO
-
-Setup
-
-Clone the repository:
-
-git clone https://github.com/yourusername/pyroscope-ai.git
-cd pyroscope-ai
-
-Install dependencies:
-
+bash
+Copy
 pip install -r requirements.txt
-
 Convert YOLOv8 model to ONNX (if not done already):
 
+bash
+Copy
 python pyroscope_edge.py
-
 Usage
-
 Run the detection script:
 
+bash
+Copy
 python pyroscope_edge.py
-
 Press q to exit the live detection.
 
 Deployment on Edge Devices
-
 Ensure ONNX Runtime is installed with CUDA support if using Jetson.
 
-Optimize ONNX model using TensorRT for better performance.
+Optimize the ONNX model using TensorRT for better performance.
 
 Use a USB or CSI camera for real-time video feed.
 
 Contributing
+Contributions are welcome! Feel free to:
 
-Contributions are welcome! Feel free to fork, submit issues, or open pull requests.
+Fork the repository
+
+Submit issues
+
+Open pull requests
